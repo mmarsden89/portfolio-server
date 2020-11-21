@@ -29,7 +29,7 @@ app.get("/", (req, res) => {
   };
 
   const request = http.request(options, function (response) {
-    const body = "";
+    let body = "";
     response.on("data", function (data) {
       body += data;
     });
