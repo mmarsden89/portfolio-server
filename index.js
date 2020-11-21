@@ -32,6 +32,8 @@ app.get("/", (req, res) => {
     let body = "";
     response.on("data", function (data) {
       body += data;
+
+      console.log("body===?", data);
     });
     response.on("end", function () {
       res.send(JSON.parse(body));
