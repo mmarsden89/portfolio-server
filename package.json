@@ -1,5 +1,5 @@
 {
-  "name": "portfolio-server",
+  "name": "portfolio-mm-server",
   "version": "1.0.0",
   "description": "server for handling route",
   "main": "index.js",
