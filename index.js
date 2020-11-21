@@ -23,7 +23,7 @@ const PORT = process.env.PORT || serverDevPort;
 // create a route for the app which gets the weather data
 app.get("/", (req, res) => {
   const options = {
-    host: "api.openweathermap.org",
+    host: "https://api.openweathermap.org",
     path: `/data/2.5/weather?q=Seattle&units=imperial&appid=${process.env.WEATHER_API}`,
     method: "GET",
   };
@@ -32,8 +32,6 @@ app.get("/", (req, res) => {
     let body = "";
     response.on("data", function (data) {
       body += data;
-
-      console.log("body===?", data);
     });
     response.on("end", function () {
       res.send(JSON.parse(body));
